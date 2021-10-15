@@ -1,0 +1,4 @@
+Steak;Pork steak;Weekly;false;false;false;false;120.0;0.0;200.0
+Bread;Wheat bread;Daily;true;false;false;false;20.0;100.0;0.0
+Egg;Eggs;Weekly;false;false;true;true;30.0;0.0;30.0
+Descripcion1;Alimento1;Frecuencia1;true;true;true;true;2.0;10.0;25.0

@@ -1,0 +1,1 @@
+2021-10-14;Plato1;Descripcionplato1;25.0;Descripcion1;Alimento1;Frecuencia1;false;false;true;true;2.0;10.0;25.0
