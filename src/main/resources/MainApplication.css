@@ -1,3 +1,35 @@
 #paneLeft, #paneRight{
   -fx-border-color: black;
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+#anchorPane{
+    -fx-background-color: linear-gradient(#3B4252,#81A1C1);
+}
+
+#btnNewAliment, #btnNewDish, #btnSaveMenu, #btnSetLimits, #btnAddToMenu, #btnDeleteFromMenu{
+     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+     -fx-background-radius: 50px;
+     -fx-border-radius: 50px;
+     -fx-border-width: 5px;
+}
+
+#btnAddToMenu{
+   -fx-background-color: #88C0D0;
+}
+
+#btnDeleteFromMenu{
+    -fx-background-color: #BF616A;
+}
+
+#btnNewAliment, #btnNewDish, #btnSetLimits{
+    -fx-background-color: #D08770;
+}
+
+ #btnSaveMenu{
+    -fx-background-color: #A3BE8C;
+ }
+
+#hBoxCheckBtns, #hBoxHeader{
+     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
 }

@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="353.0" prefWidth="519.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cateringfx.NutritionalLimitsController">
+<AnchorPane fx:id="anchorPane" prefHeight="353.0" prefWidth="519.0" stylesheets="@../../NutritionalLimits.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cateringfx.NutritionalLimitsController">
    <children>
-      <HBox prefHeight="77.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox fx:id="hBoxHeader" prefHeight="77.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label maxWidth="1.7976931348623157E308" text="Modify nutritional limits" textFill="#202cd7">
+            <Label maxWidth="1.7976931348623157E308" text="Modify nutritional limits" textFill="#a3be8c">
                <font>
                   <Font size="28.0" />
                </font>
@@ -27,7 +27,7 @@
          <children>
             <HBox spacing="75.0">
                <children>
-                  <Label maxWidth="1.7976931348623157E308" text="Calories">
+                  <Label maxWidth="1.7976931348623157E308" text="Calories" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -37,7 +37,7 @@
             </HBox>
             <HBox spacing="23.0">
                <children>
-                  <Label maxWidth="1.7976931348623157E308" text="Carbohydrates">
+                  <Label maxWidth="1.7976931348623157E308" text="Carbohydrates" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -47,7 +47,7 @@
             </HBox>
             <HBox spacing="114.0">
                <children>
-                  <Label maxWidth="1.7976931348623157E308" text="Fat">
+                  <Label maxWidth="1.7976931348623157E308" text="Fat" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>

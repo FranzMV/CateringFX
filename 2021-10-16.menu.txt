@@ -1,0 +1,1 @@
+2021-10-16;Egg;Eggs;Weekly;false;false;true;true;30.0;0.0;30.0;Bread;Wheat bread;Daily;true;false;false;false;20.0;100.0;0.0;Steak;Pork steak;Weekly;false;false;false;false;120.0;0.0;200.0;

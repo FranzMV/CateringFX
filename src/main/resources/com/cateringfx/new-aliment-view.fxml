@@ -10,15 +10,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="424.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cateringfx.NewAlimentController">
+<AnchorPane fx:id="anchorPane" prefHeight="424.0" prefWidth="600.0" stylesheets="@../../NewAliment.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cateringfx.NewAlimentController">
    <children>
       <HBox layoutX="213.0" layoutY="39.0" prefHeight="40.0" prefWidth="201.0" />
       <VBox layoutX="138.0" layoutY="70.0" spacing="18.0">
          <children>
             <HBox spacing="108.0">
                <children>
-                  <Label text="Name">
+                  <Label text="Name" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -28,7 +27,7 @@
             </HBox>
             <HBox spacing="68.0">
                <children>
-                  <Label text="Description">
+                  <Label text="Description" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -42,7 +41,7 @@
             </HBox>
             <HBox spacing="73.0">
                <children>
-                  <Label text="Frequency">
+                  <Label text="Frequency" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -52,7 +51,7 @@
             </HBox>
             <HBox spacing="91.0">
                <children>
-                  <Label text="Calories">
+                  <Label text="Calories" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -62,7 +61,7 @@
             </HBox>
             <HBox spacing="40.0">
                <children>
-                  <Label text="Carbohydrates">
+                  <Label text="Carbohydrates" textFill="#eeeded">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -72,7 +71,7 @@
             </HBox>
             <HBox spacing="130.0">
                <children>
-                  <Label text="Fat">
+                  <Label text="Fat" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -82,31 +81,31 @@
             </HBox>
          </children>
       </VBox>
-      <Label layoutX="209.0" layoutY="18.0" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="201.0" text="NEW ALIMENT" textFill="#113cd7">
+      <Label layoutX="209.0" layoutY="18.0" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="201.0" text="NEW ALIMENT" textFill="#a3be8c">
          <font>
             <Font size="28.0" />
          </font>
       </Label>
       <VBox layoutX="65.0" layoutY="332.0">
          <children>
-            <HBox spacing="90.0">
+            <HBox fx:id="hBoxCheckBtns" spacing="90.0">
                <children>
-                  <CheckBox fx:id="checkMilk" mnemonicParsing="false" text="Milk">
+                  <CheckBox fx:id="checkMilk" mnemonicParsing="false" text="Milk" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox fx:id="checkNuts" mnemonicParsing="false" text="Nuts">
+                  <CheckBox fx:id="checkNuts" mnemonicParsing="false" text="Nuts" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox fx:id="checkEgg" mnemonicParsing="false" text="Egg">
+                  <CheckBox fx:id="checkEgg" mnemonicParsing="false" text="Egg" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </CheckBox>
-                  <CheckBox fx:id="checkGrluten" mnemonicParsing="false" text="Gluten">
+                  <CheckBox fx:id="checkGluten" mnemonicParsing="false" text="Gluten" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -115,7 +114,7 @@
             </HBox>
             <HBox>
                <children>
-                  <Button fx:id="btnSave" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Save" textFill="#182cdb">
+                  <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveNewAliment" prefHeight="25.0" prefWidth="109.0" text="Save">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>

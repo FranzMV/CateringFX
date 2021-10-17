@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.util.Objects;
 
 /**
- * <h1>Class ScreenLoader.</h1>
  * <p>Class to load different views.</p>
  * @author Francisco David Manzanedo Valle.
  * @version 1.0

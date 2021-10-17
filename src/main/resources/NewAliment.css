@@ -1,0 +1,15 @@
+#anchorPane{
+    -fx-background-color: linear-gradient(#3B4252,#81A1C1);
+}
+
+#btnSave{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+    -fx-background-color: #A3BE8C;
+}
+
+#hBoxCheckBtns{
+     -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}

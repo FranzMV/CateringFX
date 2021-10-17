@@ -1,14 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.cateringfx.NewDishController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="anchorPane" prefHeight="464.0" prefWidth="606.0" stylesheets="@../../NewDish.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cateringfx.NewDishController">
+   <children>
+      <HBox layoutX="235.0" layoutY="10.0">
+         <children>
+            <Label text="NEW DISH" textFill="#a3be8c">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="86.0" layoutY="50.0" spacing="17.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="78.0">
+         <children>
+            <Label text="Name" textFill="WHITE">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtNameDish" />
+            <Label text="Description" textFill="WHITE">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtDescriptionDish" />
+         </children>
+      </HBox>
+      <Label layoutX="241.0" layoutY="92.0" text="List of Ingredients" textFill="#ebcb8b">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableViewIngredients" layoutY="118.0" prefHeight="147.0" prefWidth="606.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="columnName" prefWidth="174.0" text="Name" />
+          <TableColumn fx:id="columnDescription" prefWidth="288.0" text="Description" />
+            <TableColumn fx:id="columnQuantity" minWidth="0.0" prefWidth="142.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <VBox layoutX="14.0" layoutY="274.0" spacing="3.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="8.0">
+         <children>
+            <HBox spacing="37.0">
+               <children>
+                  <Label text="Name" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtIngredientName" />
+                  <Label text="Calories" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtIngredientCalories" prefHeight="25.0" prefWidth="61.0">
+                     <HBox.margin>
+                        <Insets left="1.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Quantity" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtIngredientQuantity" prefHeight="25.0" prefWidth="67.0" />
+               </children>
+            </HBox>
+            <HBox spacing="9.0">
+               <children>
+                  <Label text="Description" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtIngredientDescription" />
+                  <Label text="Carbohydrates" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="25.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtIngredienteCarbo" prefHeight="25.0" prefWidth="61.0">
+                     <HBox.margin>
+                        <Insets left="-4.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox spacing="26.0">
+               <children>
+                  <Label text="Frequency" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtIngredientFrequency">
+                     <HBox.margin>
+                        <Insets left="-10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Fat" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="3.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtIngredientFat" prefHeight="25.0" prefWidth="61.0">
+                     <HBox.margin>
+                        <Insets left="45.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnAddIngredient" mnemonicParsing="false" onAction="#addNewIngredient" prefHeight="25.0" prefWidth="104.0" text="Add Ingredient">
+                     <HBox.margin>
+                        <Insets left="57.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox fx:id="hBoxCheckBtns" layoutX="34.0" layoutY="377.0" spacing="110.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="53.0">
+         <children>
+            <CheckBox fx:id="checkMilk" mnemonicParsing="false" text="Milk" textFill="WHITE" />
+            <CheckBox fx:id="checkNuts" mnemonicParsing="false" text="Nuts" textFill="WHITE" />
+            <CheckBox fx:id="checkEgg" mnemonicParsing="false" text="Egg" textFill="WHITE" />
+            <CheckBox fx:id="checkGluten" mnemonicParsing="false" text="Gluten" textFill="WHITE" />
+         </children>
+      </HBox>
+      <HBox fx:id="btnSaveNewDish" layoutX="263.0" layoutY="411.0" onDragDetected="#saveNewDish" AnchorPane.leftAnchor="263.0" AnchorPane.rightAnchor="279.0">
+         <children>
+            <Button fx:id="btnSaveDish" mnemonicParsing="false" onAction="#saveNewDish" text="Save">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
 </AnchorPane>

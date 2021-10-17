@@ -7,8 +7,7 @@ import java.util.Optional;
 
 
 /**
- *  <h1>Class MessageUtils.</h1>
- *  <p>Class to manage some context messages.</p>
+ *  <p>Create some context messages.</p>
  *  @author Francisco David Manzanedo Valle.
  *  @version 1.0
  */

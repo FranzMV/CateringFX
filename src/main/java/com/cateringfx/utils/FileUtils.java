@@ -10,13 +10,28 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * It is in charge of managing all the Input/Output corresponding to the writing and reading of text files.
+ * @author Francisco David Manzanedo Valle.
+ * @version 1.0
+ */
 public class FileUtils {
 
+    /**Name corresponding to the aliments text file.*/
     private static final String FILENAME_ALIMENTS = "aliments.txt";
+    /**Name corresponding to the dishes text file.*/
     private static final String FILENAME_DISHES = "dishes.txt";
+    /**The separator to use when reading all lines of text .*/
     private static final String SEPARATOR = ";";
 
-    //to load the aliments and dishes stored in aliments.txt and dishes.txt.
+    /**
+     * Load the aliments and dishes stored in {@link FileUtils#FILENAME_ALIMENTS} and {@link FileUtils#FILENAME_DISHES}.
+     * @return A list of aliments and dishes.
+     * @see MenuElement
+     * @see Aliment
+     * @see Dish
+     * @see List
+     */
     public static List<MenuElement> loadElements(){
 
         List<MenuElement> elements = new ArrayList<>();
@@ -60,56 +75,73 @@ public class FileUtils {
                 }).collect(Collectors.toList()));
 
             }catch (FileNotFoundException e1){
-                System.out.println("No se ha encontrado el fichero");
+                System.out.println("File not found.");
                 e1.printStackTrace();
             }catch (IOException e2){
-                System.out.println("Se ha producido un error.");
+                System.out.println("An error has occurred.");
                 e2.printStackTrace();
             }
         }
         return elements;
     }
 
-    //to store a new Aliment defined in the application.
+
+    /**
+     * Save a new Aliment defined in the application.
+     * @param a The Aliment to be saved.
+     * @see Aliment
+     */
     public static void storeAliment(Aliment a){
-        try(PrintWriter pw = new PrintWriter(new FileWriter(Paths.get(FILENAME_ALIMENTS).toAbsolutePath().toString(),
-                true)))
+        try(PrintWriter pw = new PrintWriter(
+                new FileWriter(
+                        Paths.get(FILENAME_ALIMENTS).toAbsolutePath().toString(),
+                        true)))
         {
             pw.println(a);
 
         }catch(IOException e1){
-            System.out.println("Error escribiendo");
+            System.out.println("An error occurred while write the Aliment.");
             e1.printStackTrace();
         }
 
     }
 
-    //to store a new Dish defined in the application.
+
+    /**
+     *Save a new Dish defined in the application.
+     * @param d The Dish to be saved.
+     * @see Dish
+     */
     public static void storeDish(Dish d){
-        try(PrintWriter pw = new PrintWriter(new FileWriter(Paths.get(FILENAME_DISHES).toAbsolutePath().toString(),
-                true)))
+        try(PrintWriter pw = new PrintWriter(
+                new FileWriter(
+                        Paths.get(FILENAME_DISHES).toAbsolutePath().toString(),
+                        true)))
         {
             pw.println(d);
 
         }catch(IOException e1){
-            System.out.println("Error escribiendo");
+            System.out.println("An error occurred while write the Dish.");
             e1.printStackTrace();
         }
     }
 
-    //to store a menu in the file called dateOfTheMenu.menu
-    /*
-        And the structure of the text file containing the menu(dateOfTheMenu.menu) will be:
-        Date;aliments of dishes in the same format that before.
+    /**
+     * Save a new Menu defined in the application.
+     * @param m The Menu to be saved.
+     * @see Menu
      */
     public static void storeMenu(Menu m){
+        final String MENU_FILENAME = m.getDate()+".menu.txt";
         try(PrintWriter pw = new PrintWriter(
-                new FileWriter(Paths.get(m.getDate().toString()).toAbsolutePath()+ ".menu.txt")))
+                new FileWriter(
+                        Paths.get(MENU_FILENAME).toAbsolutePath().toString(),
+                        true)))
         {
             pw.println(m);
 
         }catch(IOException e1){
-            System.out.println("Error escribiendo");
+            System.out.println("An error occurred while write the Menu.");
             e1.printStackTrace();
         }
     }
