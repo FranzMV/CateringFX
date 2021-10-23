@@ -76,6 +76,25 @@ public class Ingredient {
     }
 
     /**
+     * Gets the aliment's calories.
+     * @return double representing the total of the aliment's calories.
+     */
+    public double getCalories(){ return aliment.getCalories() * quantity;}
+
+    /**
+     * Gets the aliment's carbohydrates.
+     * @return double representing the total of the aliment's carbohydrates.
+     */
+    public double getCarbohydrates(){return aliment.getCarbohydrates() * quantity; }
+
+    /**
+     * Gets the aliment's fat
+     * @return double representing the total of the aliment's fats.
+     */
+    public double getFat(){ return aliment.getFat() * quantity ; }
+
+
+    /**
      * Gets all the Ingredient's attributes.
      * @return A String containing all the ingredient's attributes.
      * @see Aliment

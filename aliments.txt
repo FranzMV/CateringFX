@@ -3,3 +3,5 @@ Bread;Wheat bread;Daily;true;false;false;false;20.0;100.0;0.0
 Egg;Eggs;Weekly;false;false;true;true;30.0;0.0;30.0
 Aliment1;Description1;Frequency1;false;false;true;true;34.0;22.0;150.0;
 PRUEBA1;asdasd;asdasd;false;false;true;true;676.0;1231.0;123123.0;
+RRR;asaaa;aaa;false;false;true;true;3434.0;222.0;111.0;
+AlimentTest;sasd;wweww;false;false;true;true;30.0;10.0;156.0;

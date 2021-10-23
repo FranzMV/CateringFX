@@ -74,9 +74,8 @@ public class NewDishController implements Initializable {
 
         if(txtNameDish.getText().isEmpty() || txtDescriptionDish.getText().isEmpty()) {
             MessageUtils.showError("Error", "The name and description of the dish can not be empty.");
-            clearFields();
+
         }else {
-            //newDish = new Dish(txtNameDish.getText(),txtDescriptionDish.getText());
             if(txtIngredientName.getText().isEmpty() || txtIngredientDescription.getText().isEmpty() ||
                 txtIngredientFrequency.getText().isEmpty() || txtIngredientCalories.getText().isEmpty() ||
                 txtIngredienteCarbo.getText().isEmpty() || txtIngredientFat.getText().isEmpty() ||
@@ -102,7 +101,6 @@ public class NewDishController implements Initializable {
                         "ingredient?");
                 if (confirmation) {
                     tableViewIngredients.setItems(FXCollections.observableArrayList(newDish.getIngredients()));
-                    clearFields();
                 }
             }
         }
@@ -136,6 +134,7 @@ public class NewDishController implements Initializable {
         txtIngredientDescription.setText("");
         txtIngredientFrequency.setText("");
         txtIngredientCalories.setText("");
+        txtIngredienteCarbo.setText("");
         txtIngredientName.setText("");
         txtIngredientFat.setText("");
         txtIngredientQuantity.setText("");

@@ -99,6 +99,9 @@ public class Menu {
     public double getFat() { return elements.stream().mapToDouble(MenuElement::getFat).sum(); }
 
     /**
+     * return ingredients.stream()
+     *         .map(ingredient -> ingredient.getCalories())
+     *         .reduce(0.0,(a,b)->a+b);
      * Gets if the element stored in the list contains milk.
      * @return boolean if the element contains milk true, if not, false.
      */

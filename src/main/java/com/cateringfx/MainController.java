@@ -75,6 +75,7 @@ public class MainController implements Initializable {
     private void tearUp(){
 
         menu = new Menu(LocalDate.now());
+        //The datePicker click event doesn't work when the user click on the date, so I set the date manually
         datePickerMenu.setValue(menu.getDate());
 
         alimentList = FXCollections.observableArrayList(FileUtils.loadElements());

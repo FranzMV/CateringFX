@@ -6,3 +6,4 @@ Tortilla española;huevos;6.0;huevos;huevos;Daily;false;false;false;true;50.0;0.
 Prueba2Plato;asdasd;6643.0;puebaPlatoIngre;desdce;asdasd;false;false;true;true;232.0;544.0;111.0;
 plato22a;sdasd;56.0;Alimentpalto22;asdasd;asdasd;false;true;true;false;222.0;333.0;111.0;
 Funciona;descripcion;444.0;name;description;qqqq;true;false;false;true;222.0;111.0;333.0;
+EEEEE;rrrr;44.0;ee;aaa;qq;true;false;true;true;23.0;33.0;11.0;
